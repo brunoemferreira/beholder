@@ -1,9 +1,10 @@
 const express = require("express");
-
+require("express-async-errors");
 
 const cors = require("cors");
 const helmet = require("helmet");
 
+const errorMiddleware = require("./middlewares/errorMiddleware");
 
 
 
@@ -18,5 +19,10 @@ app.use(express.json());
 // Middlewares de Processamento 
 
 
+
+
+
+
+app.use(errorMiddleware);
 
 module.exports = app;
