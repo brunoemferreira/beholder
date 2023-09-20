@@ -6,6 +6,12 @@ const helmet = require("helmet");
 
 const errorMiddleware = require("./middlewares/errorMiddleware");
 
+
+
+
+
+const authController = require("./controllers/authController");
+
 const app = express();
 
 // Middlewares de Configuraçao
@@ -14,14 +20,22 @@ app.use(helmet());
 app.use(express.json());
 
 // Middlewares de Processamento
-app.post("/login", (req, res, next) => {
-  const { email, password } = req.body;
-  res.sendStatus(200);
-});
+app.post("/login", authController.doLogin);
 
-app.post("/logout", (req, res, next) => {
-  res.sendStatus(200);
-});
+
+
+
+
+
+
+
+
+
+
+
+
+
+app.post("/logout", authController.doLogout);
 
 // Middleware de tratamento de Erros
 app.use(errorMiddleware);
