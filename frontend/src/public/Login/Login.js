@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Link, useHistory } from "react-router-dom";
+import { doLogin } from "../../services/AuthService";
 
 function Login() {
   const history = useHistory();
@@ -15,15 +16,15 @@ function Login() {
   function onSubmit(event) {
     event.preventDefault();
 
-   /* doLogin(email, password)
+    doLogin(email, password)
       .then((response) => {
-        localStorage.setItem("token", response.token);
+        // localStorage.setItem("token", response.token);
         history.push("/dashboard");
       })
       .catch((err) => {
         console.error(err);
         setError(`Invalid user and/or password!`);
-      }); */
+      });
   }
 
   return (
