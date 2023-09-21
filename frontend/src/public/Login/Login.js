@@ -18,7 +18,7 @@ function Login() {
 
     doLogin(email, password)
       .then((response) => {
-        // localStorage.setItem("token", response.token);
+        localStorage.setItem("token", response.token);
         history.push("/dashboard");
       })
       .catch((err) => {
