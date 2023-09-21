@@ -3,7 +3,7 @@ require("express-async-errors");
 
 const cors = require("cors");
 const helmet = require("helmet");
-
+const authMiddleware = require("./middlewares/authMiddleware");
 const errorMiddleware = require("./middlewares/errorMiddleware");
 
 
@@ -11,6 +11,8 @@ const errorMiddleware = require("./middlewares/errorMiddleware");
 
 
 const authController = require("./controllers/authController");
+const settingsController = require("./controllers/settingsController");
+
 
 const app = express();
 
@@ -23,6 +25,7 @@ app.use(express.json());
 app.post("/login", authController.doLogin);
 
 
+app.use("/settings", authMiddleware, settingsController.getSettings);
 
 
 
