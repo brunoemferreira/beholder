@@ -1,7 +1,27 @@
-import React from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { Link, useHistory } from "react-router-dom";
 
+import { getSettings, updateSettings } from "../../services/SettingsService";
+
 function Settings() {
+  const confirmPassword = useRef("");
+  const [settings, setSettings] = useState({});
+  const [notification, setNotification] = useState({});
+
+  useEffect(() => {
+    const token = localStorage.getItem("token");
+
+    getSettings(token)
+      .then((result) => setSettings(result))
+      .catch((err) => {
+        console.error(err.response ? err.response.data : err.message);
+        setNotification({
+          type: "error",
+          text: err.response ? err.response.data : err.message,
+        });
+      });
+  }, []);
+
   return (
     <main>
       <section className="vh-lg-100 mt-5 mt-lg-0 bg-soft d-flex align-items-center">

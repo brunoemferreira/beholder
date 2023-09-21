@@ -1,3 +1,4 @@
+const authController = require("../controllers/authController");
 const jwt = require("jsonwebtoken");
 
 module.exports = (req, res, next) => {
@@ -6,8 +7,10 @@ module.exports = (req, res, next) => {
     try {
       const decoded = jwt.verify(token, process.env.JWT_SECRET);
       if (decoded) {
-        res.locals.token = decoded;
-        return next();
+        if (!authController.isBlacklisted(token)) {
+          res.locals.token = decoded;
+          return next();
+        }
       }
     } catch (err) {
       console.log(err);
