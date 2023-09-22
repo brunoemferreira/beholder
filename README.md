@@ -4,6 +4,15 @@
    <img width="300px" src="https://github.com/brunoemferreira/cs-luiztools-beholder-2-0/blob/main/frontend/public/img/favicon/android-chrome-512x512.png" />
 </div>
 
+</br>
+
+<!-- ************************************* Baadges ********************************************* -->
+<p align="center">
+  <img alt="GitHub language count" src="https://img.shields.io/github/languages/count/brunoemferreira/beholder?color=%2304D361">
+  <img alt="Repository size" src="https://img.shields.io/github/repo-size/brunoemferreira/beholder">
+  <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/brunoemferreira/beholder">
+</p>
+
 ## 🚀 **Sobre o Beholder v2.0**
 O Beholder 2.0 é um TraderBot de negociação focado no Exchange Binance
 
@@ -90,8 +99,6 @@ O Beholder 2.0 é um TraderBot de negociação focado no Exchange Binance
 
 ## 🧰 **Ferramentas, Bibliotecas e Framewroks**
  * [<img src="./assets/expressjs.png" width="20"/>]()
- * []() - Sequelize
- 
  * [<img src="./assets/websocket-logo.png" width="20"/>]() - WebSockets
 
 
