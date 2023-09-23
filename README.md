@@ -126,12 +126,13 @@ $ docker run -d --name some-mysql -e MYSQL_ROOT_PASSWORD=123456 -p 3306:3306 mys
 
 ### **Configuração do MySQL**
 ```text
+# Driver Connection
 Server Host : localhost
 Port        : 3306
 User        : root
 Password    : 123456
 
-# Driver properties
+# Driver Properties
 allowPublicKeyRetrieval=TRUE
 useSSL=FALSE
 ```
