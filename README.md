@@ -114,7 +114,7 @@ O Beholder 2.0 é um TraderBot de negociação focado no Exchange Binance
 
 ## ⚙️ **Configurações Necessárias**
 
-### **Configuração do Docker**
+### **Configuração do Docker para o MySql**
 ```yaml
 # Baixa a imagem do container docker mysql
 $ docker pull mysql
@@ -122,15 +122,18 @@ $ docker pull mysql
 # Roda o container docker em segundo plano com o nome de some-server vinculando a
 # porta do container a porta da maquina e setando a senha informada para o usuario root
 $ docker run -d --name some-mysql -e MYSQL_ROOT_PASSWORD=123456 -p 3306:3306 mysql:8.1.0
-
 ```
-
 
 ### **Configuração do MySQL**
 ```text
-Port     : 3306
-User     : root
-Password : senha
+Server Host : localhost
+Port        : 3306
+User        : root
+Password    : 123456
+
+# Driver properties
+allowPublicKeyRetrieval=TRUE
+useSSL=FALSE
 ```
 
 ### Configurações Binance
