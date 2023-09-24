@@ -65,6 +65,9 @@ O Beholder 2.0 é um TraderBot de negociação focado no Exchange Binance
 
 ### Fluxo de Comunicação da Aplicação
 
+<div align="center" >
+   <img width="544px" src="https://github.com/brunoemferreira/beholder/assets/17993135/68d43dbd-b536-4c28-8020-caced9873a79" />
+</div>
 
 ### Fluxo de Autenticação ( JWT )
 
@@ -102,14 +105,14 @@ O Beholder 2.0 é um TraderBot de negociação focado no Exchange Binance
 * jsonwebtoken
 * bcryptjs
 
+### **Sequelize**
+
+
+
+
 
 ## 🔨 **Database**
 
-![MySQL](https://img.shields.io/badge/mysql-%2300f.svg?style=for-the-badge&logo=mysql&logoColor=white)
-
-## 🧰 **Ferramentas, Bibliotecas e Framewroks**
- * [<img src="./assets/expressjs.png" width="20"/>]()
- * [<img src="./assets/websocket-logo.png" width="20"/>]() - WebSockets
 
 
 ## ⚙️ **Configurações Necessárias**
