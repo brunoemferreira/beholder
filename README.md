@@ -107,6 +107,8 @@ O Beholder 2.0 é um TraderBot de negociação focado no Exchange Binance
 
 ### **Sequelize**
 
+* Migrations
+* Seeders
 
 
 
